@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/mo_superheroes">
+
+    <fragment
+        android:id="@+id/mo_superheroes"
+        android:name="com.edwinacubillos.sesionfragments.SuperheroesFragment"
+        android:label="@string/superheroes"
+        tools:layout="@layout/fragment_superheroes" />
+
+    <fragment
+        android:id="@+id/mo_superman"
+        android:name="com.edwinacubillos.sesionfragments.SupermanFragment"
+        android:label="@string/superman"
+        tools:layout="@layout/fragment_superman" />
+
+    <fragment
+        android:id="@+id/mo_batman"
+        android:name="com.edwinacubillos.sesionfragments.BatmanFragment"
+        android:label="@string/batman"
+        tools:layout="@layout/fragment_batman" />
+
+    <fragment
+        android:id="@+id/mo_flash"
+        android:name="com.edwinacubillos.sesionfragments.FlashFragment"
+        android:label="@string/flash"
+        tools:layout="@layout/fragment_flash" />
+</navigation>
