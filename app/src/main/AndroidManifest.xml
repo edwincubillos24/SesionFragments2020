@@ -10,17 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".SuperheroeDetalleActivity"
+            android:label="@string/title_activity_superheroe_detalle"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".bottom_navigation.BottomActivity"></activity>
+        <activity
             android:name=".tabbed_navigation.TabActivity"
             android:label="@string/title_activity_tab"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".drawer_navigation.DrawerActivity"
             android:label="@string/title_activity_drawer"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".bottom_navigation.BottomActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

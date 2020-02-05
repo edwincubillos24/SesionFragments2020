@@ -1,9 +1,12 @@
 package com.edwinacubillos.sesionfragments
 
 import android.content.Context
+import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_rv.view.*
 
@@ -43,10 +46,26 @@ class SuperheroesRVAdapter(
         itemView: View, context: Context
     ) : RecyclerView.ViewHolder(itemView) {
 
-        fun bindSuperheroe(superheroe: Superheroes){
+        private var context: Context
+
+        init {
+            this.context = context
+        }
+
+        fun bindSuperheroe(superheroe: Superheroes) {
             itemView.tv_nombre.text = superheroe.nombre
             itemView.tv_nombre_real.text = superheroe.nombre_real
             itemView.iv_escudo.setImageResource(superheroe.foto)
+            itemView.setOnClickListener {
+                Toast.makeText(context, superheroe.nombre, Toast.LENGTH_SHORT).show()
+                var intent = Intent(context, SuperheroeDetalleActivity::class.java)
+                intent.putExtra("superheroe", superheroe).addFlags(FLAG_ACTIVITY_NEW_TASK)
+                context.startActivity(intent)
+            }
+            itemView.setOnLongClickListener {
+                Toast.makeText(context, superheroe.nombre+"Long", Toast.LENGTH_SHORT).show()
+                return@setOnLongClickListener true
+            }
         }
     }
 }

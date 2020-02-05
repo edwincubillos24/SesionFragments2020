@@ -33,4 +33,6 @@
     <string name="list">Superheroes</string>
     <string name="nombre_real">Clark Kent</string>
     <string name="superheroes">Superheroes</string>
+    <string name="title_activity_superheroe_detalle">SuperheroeDetalleActivity</string>
+
 </resources>
