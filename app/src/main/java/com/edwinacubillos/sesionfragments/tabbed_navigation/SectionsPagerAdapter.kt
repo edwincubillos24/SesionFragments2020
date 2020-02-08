@@ -1,4 +1,4 @@
-package com.edwinacubillos.sesionfragments.ui.main
+package com.edwinacubillos.sesionfragments.tabbed_navigation
 
 import android.content.Context
 import androidx.fragment.app.Fragment
@@ -14,10 +14,7 @@ private val TAB_TITLES = arrayOf(
     R.string.batman,
     R.string.flash
 )
-/**
- * A [FragmentPagerAdapter] that returns a fragment corresponding to
- * one of the sections/tabs/pages.
- */
+
 class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     FragmentPagerAdapter(fm) {
 
@@ -35,7 +32,6 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     }
 
     override fun getCount(): Int {
-        // Show 3 total pages.
         return 3
     }
 }
